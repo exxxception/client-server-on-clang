@@ -10,13 +10,6 @@
 #define PORT 8000
 #define BUF_SIZE 1024
 
-/*          TO-DO:
-    1. Check "// WHAT?"
-    2. Refactoring code
-    3. Fix two messages
-*/
-
-
 ClientList *client_list;
 
 void send_to_all_clients(char buffer[])
@@ -36,9 +29,9 @@ void send_to_all_clients(char buffer[])
 
 void client_handler(int *client)
 {
-    int recv_buffer[BUF_SIZE] = {}; // WHAT?
+    int recv_buffer[BUF_SIZE] = {};
     int send_buffer[BUF_SIZE] = {};
-    ClientList *c = (ClientList *)client; // WHAT?
+    ClientList *c = (ClientList *)client;
 
     while(1)
     {
